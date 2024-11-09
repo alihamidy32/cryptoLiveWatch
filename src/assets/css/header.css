@@ -1,0 +1,35 @@
+.ripple{
+  @apply size-7 border-2 absolute border-green-300 rounded-full flex justify-center items-center;
+  animation: ripple 3s infinite;
+}
+
+.circle-three{
+  @apply size-3 bg-green-400 rounded-full relative z-10;
+
+}
+
+.ripple:nth-child(2) {
+  @apply size-10 border-2 absolute border-green-300 rounded-full flex justify-center items-center;
+  animation-delay: 1s;
+}
+
+@keyframes circleThree-animation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
